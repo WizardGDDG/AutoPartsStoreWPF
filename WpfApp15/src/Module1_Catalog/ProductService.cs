@@ -16,7 +16,7 @@ namespace AutoPartsStoreWPF
         {
             LoadData();
         }
-
+        // r
         private void LoadData()
         {
             try
