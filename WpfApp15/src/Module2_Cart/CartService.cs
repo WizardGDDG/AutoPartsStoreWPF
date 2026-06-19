@@ -29,7 +29,7 @@ namespace AutoPartsStoreWPF
             var item = items.FirstOrDefault(i => i.ProductId == productId);
             if (item != null) item.Quantity = newQuantity;
         }
-
+        // п
         public decimal GetTotal() => items.Sum(i => i.Total);
         public List<CartItem> GetItems() => items;
         public void Clear() => items.Clear();
