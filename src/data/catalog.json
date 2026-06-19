@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "Name": "Поршневая группа 1.8",
+    "Category": "Детали двигателя",
+    "Price": 15000,
+    "Stock": 10,
+    "Description": "Поршни + кольца для VW 1.8"
+  },
+  {
+    "Id": 2,
+    "Name": "Амортизатор передний",
+    "Category": "Ходовая часть",
+    "Price": 8500,
+    "Stock": 5,
+    "Description": "Амортизатор Kayaba для Toyota"
+  },
+  {
+    "Id": 3,
+    "Name": "Стартер 1.4",
+    "Category": "Электрика",
+    "Price": 12000,
+    "Stock": 3,
+    "Description": "Стартер Bosch для VW 1.4"
+  },
+  {
+    "Id": 4,
+    "Name": "Масло моторное 5W-40",
+    "Category": "Расходные материалы",
+    "Price": 3500,
+    "Stock": 20,
+    "Description": "Castrol Magnatec 5W-40 4л"
+  },
+  {
+    "Id": 5,
+    "Name": "Ремень ГРМ",
+    "Category": "Детали двигателя",
+    "Price": 5000,
+    "Stock": 7,
+    "Description": "Ремень Gates для VW 1.8"
+  },
+  {
+    "Id": 6,
+    "Name": "Тормозные колодки передние",
+    "Category": "Ходовая часть",
+    "Price": 3200,
+    "Stock": 12,
+    "Description": "Колодки Brembo для VW"
+  },
+  {
+    "Id": 7,
+    "Name": "Аккумулятор 60Ач",
+    "Category": "Электрика",
+    "Price": 6500,
+    "Stock": 8,
+    "Description": "Аккумулятор Bosch S5 60Ач"
+  },
+  {
+    "Id": 8,
+    "Name": "Фильтр масляный",
+    "Category": "Расходные материалы",
+    "Price": 1200,
+    "Stock": 25,
+    "Description": "Фильтр масляный MANN"
+  },
+  {
+    "Id": 9,
+    "Name": "Свечи зажигания NGK",
+    "Category": "Электрика",
+    "Price": 1500,
+    "Stock": 15,
+    "Description": "Комплект свечей NGK (4 шт.)"
+  },
+  {
+    "Id": 10,
+    "Name": "Прокладка ГБЦ",
+    "Category": "Детали двигателя",
+    "Price": 2800,
+    "Stock": 6,
+    "Description": "Прокладка головки блока цилиндров"
+  }
+]
