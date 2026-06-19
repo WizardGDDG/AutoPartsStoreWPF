@@ -1,0 +1,65 @@
+<UserControl x:Class="AutoPartsStoreWPF.OrderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="ОФОРМЛЕНИЕ ЗАКАЗА" FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <GroupBox Grid.Row="1" Header="Данные покупателя" Margin="0,0,0,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Фамилия:" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtLastName" Grid.Row="0" Grid.Column="1" Margin="5" Padding="5"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Имя:" VerticalAlignment="Center" Margin="0,5,0,0"/>
+                <TextBox x:Name="txtFirstName" Grid.Row="1" Grid.Column="1" Margin="5" Padding="5"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Адрес:" VerticalAlignment="Center" Margin="0,5,0,0"/>
+                <TextBox x:Name="txtAddress" Grid.Row="2" Grid.Column="1" Margin="5" Padding="5"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Телефон:" VerticalAlignment="Center" Margin="0,5,0,0"/>
+                <TextBox x:Name="txtPhone" Grid.Row="3" Grid.Column="1" Margin="5" Padding="5"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Email:" VerticalAlignment="Center" Margin="0,5,0,0"/>
+                <TextBox x:Name="txtEmail" Grid.Row="4" Grid.Column="1" Margin="5" Padding="5"/>
+            </Grid>
+        </GroupBox>
+
+        <Border Grid.Row="2" Background="#F8F9FA" Padding="10" Margin="0,0,0,10">
+            <TextBlock x:Name="txtTotal" TextAlignment="Center" FontSize="16">
+                Сумма заказа: 0 ₽
+            </TextBlock>
+        </Border>
+
+        <Button Grid.Row="3" Content="Оформить заказ" Click="SubmitOrder"
+                Background="#2ECC71" Foreground="White" FontWeight="Bold" FontSize="16"
+                Padding="30,12" Margin="0,0,0,10"/>
+
+        <TextBlock x:Name="txtResult" Grid.Row="4" FontSize="14" Foreground="#2ECC71" 
+                   HorizontalAlignment="Center" TextWrapping="Wrap"/>
+    </Grid>
+</UserControl>

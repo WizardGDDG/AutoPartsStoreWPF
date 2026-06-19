@@ -1,0 +1,34 @@
+﻿<Window x:Class="AutoPartsStoreWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Автомагазин запчастей" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Верхняя панель -->
+        <Border Grid.Row="0" Background="#2C3E50" Padding="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnCatalog" Content="Каталог" Click="ShowCatalog" 
+                        Margin="5" Padding="15,8" Background="#3498DB" Foreground="White" 
+                        FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+                <Button x:Name="btnCart" Content="Корзина" Click="ShowCart" 
+                        Margin="5" Padding="15,8" Background="#27AE60" Foreground="White" 
+                        FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+                <Button x:Name="btnOrder" Content="Заказ" Click="ShowOrder" 
+                        Margin="5" Padding="15,8" Background="#F39C12" Foreground="White" 
+                        FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+                <Button x:Name="btnAdmin" Content="Админ" Click="ShowAdmin" 
+                        Margin="5" Padding="15,8" Background="#E74C3C" Foreground="White" 
+                        FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Контент -->
+        <ContentControl x:Name="MainContent" Grid.Row="1" Margin="10"/>
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+<UserControl x:Class="AutoPartsStoreWPF.CartView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="КОРЗИНА" FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        <DataGrid x:Name="dgCart" Grid.Row="1" AutoGenerateColumns="False" 
+                  CanUserAddRows="False" IsReadOnly="True" Height="300">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ProductId}" Width="50"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="200"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price, StringFormat=C}" Width="100"/>
+                <DataGridTextColumn Header="Кол-во" Binding="{Binding Quantity}" Width="80"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding Total, StringFormat=C}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,10">
+            <TextBlock Text="ИТОГО:" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Margin="10"/>
+            <TextBlock x:Name="txtTotal" FontSize="18" FontWeight="Bold" Foreground="#E74C3C" 
+                       VerticalAlignment="Center" Margin="10"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Удалить выбранный" Click="RemoveItem" 
+                    Background="#E74C3C" Foreground="White" FontWeight="Bold" 
+                    Padding="20,10" Margin="5"/>
+            <Button Content="Очистить" Click="ClearCart" 
+                    Background="#E74C3C" Foreground="White" FontWeight="Bold" 
+                    Padding="20,10" Margin="5"/>
+            <Button Content="Обновить" Click="Refresh" 
+                    Background="#3498DB" Foreground="White" FontWeight="Bold" 
+                    Padding="20,10" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
